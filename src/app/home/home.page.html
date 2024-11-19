@@ -1,0 +1,117 @@
+<ion-content [fullscreen]="true">
+  <div id="nav">Pokedex</div>
+
+  <div id="search-zone">
+    <input type="search" name="" id="" placeholder="Busca tu pokemon" />
+    <br /><br />
+    <select name="" id="">
+      <option value="">Tipo de pokemon</option>
+      <option value="normal">Normal</option>
+      <option value="fighting">Lucha</option>
+      <option value="flying">Vuelo</option>
+      <option value="poison">Veneno</option>
+      <option value="ground">Tierra</option>
+      <option value="rock">Roca</option>
+      <option value="bug">Insecto</option>
+      <option value="ghost">Fantasma</option>
+      <option value="steel">Acero</option>
+      <option value="fire">Fuego</option>
+      <option value="water">Agua</option>
+      <option value="grass">Césped</option>
+      <option value="electric">Eléctrico</option>
+      <option value="psychic">Psíquico</option>
+      <option value="ice">Hielo</option>
+      <option value="dragon">Dragon</option>
+      <option value="dark">Oscuro</option>
+      <option value="fairy">Hada</option>
+      <option value="stellar">Estelar</option>
+    </select>
+  </div>
+
+  <section id="list-pokemon">
+    <div class="card">
+      <div class="card__img">
+        <img
+          src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png"
+          alt="pikachu"
+        />
+      </div>
+      <span class="card__number">#001</span>
+      <h2 class="card__name"><strong>Pikachu</strong></h2>
+      <div class="card__type card__type--electric">
+        <img src="../../assets/img/icon/electric.svg" alt="rayo" />
+      </div>
+      <button class="button" (click)="mostrarModal()">Estadísticas</button>
+    </div>
+
+    <div class="card">
+      <div class="card__img">
+        <img
+          src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png"
+          alt="charmander"
+        />
+      </div>
+      <span class="card__number">#001</span>
+      <h2 class="card__name"><strong>Charmander</strong></h2>
+      <div class="card__type card__type--fire">
+        <img src="../../assets/img/icon/electric.svg" alt="rayo" />
+      </div>
+      <button class="button" (click)="mostrarModal()">Estadísticas</button>
+    </div>
+  </section>
+
+  <div [class]="'shadow-modal ' +modalActive">
+    <div class="modal">
+      <div class="modal__title">
+        <img src="../../assets/img/icon/left-arrow.png" alt="" (click)="ocultarModal()" />
+        <h2>Pikachu</h2>
+        <img src="../../assets/img/icon/x-regular.png" alt="" (click)="ocultarModal()" />
+      </div>
+      <span class="modal__number">#001</span>
+      <div class="card__type card__type--fire">
+        <img src="../../assets/img/icon/electric.svg" alt="rayo" />
+      </div>
+      <div class="card__img">
+        <img
+          src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png"
+          alt="charmander"
+        />
+      </div>
+      <div class="modal__info">
+        <span>1 m</span>
+        <span>13 kg</span>
+      </div>
+      <p class="modal__description">
+        Levanta su cola para vigilar los alrededores. A veces, puede ser
+        alcanzado por un rayo en esa pose.
+      </p>
+
+      <div class="modal__metric">
+        <div class="metric">
+          <span>Velocidad</span>
+          <div class="metric__range">
+            <div>50%</div>
+          </div>
+        </div>
+        <div class="metric">
+          <span>Defensa</span>
+          <div class="metric__range">
+            <div>50%</div>
+          </div>
+        </div>
+        <div class="metric">
+          <span>Ataque</span>
+          <div class="metric__range">
+            <div>50%</div>
+          </div>
+        </div>
+        <div class="metric">
+          <span>Puntos de vida</span>
+          <div class="metric__range">
+            <div>50</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
